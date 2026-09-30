@@ -1,0 +1,251 @@
+
+<?php
+/*
+ * Task 1: PHP Syntax
+ */
+
+echo "<h1>Task 1: PHP Syntax</h1>";
+
+/*
+   1. VARIABLES
+    */
+
+echo "<h2>1. Variables</h2>";
+
+$name = "Ashwik";
+$age = 20;
+$course = "PHP";
+$marks = 85.5;
+
+echo "Name: $name<br>";
+echo "Age: $age<br>";
+echo "Course: $course<br>";
+echo "Marks: $marks<br>";
+
+/* 
+   2. CONSTANTS
+    */
+
+echo "<h2>2. Constants</h2>";
+
+define("COLLEGE", "ABC College");
+const COUNTRY = "India";
+
+echo "College: " . COLLEGE . "<br>";
+echo "Country: " . COUNTRY . "<br>";
+
+/* 
+   3. DATA TYPES
+    */
+
+echo "<h2>3. Data Types</h2>";
+
+$string = "Hello PHP";
+$integer = 100;
+$float = 95.75;
+$boolean = true;
+$array = array("HTML", "CSS", "PHP");
+$nullValue = null;
+
+echo "String: ";
+var_dump($string);
+
+echo "<br>Integer: ";
+var_dump($integer);
+
+echo "<br>Float: ";
+var_dump($float);
+
+echo "<br>Boolean: ";
+var_dump($boolean);
+
+echo "<br>Array: ";
+var_dump($array);
+
+echo "<br>NULL: ";
+var_dump($nullValue);
+
+/* 
+   4. OPERATORS
+   */
+
+echo "<h2>4. Operators</h2>";
+
+$a = 20;
+$b = 10;
+
+// Arithmetic operators
+echo "<h3>Arithmetic Operators</h3>";
+echo "Addition: " . ($a + $b) . "<br>";
+echo "Subtraction: " . ($a - $b) . "<br>";
+echo "Multiplication: " . ($a * $b) . "<br>";
+echo "Division: " . ($a / $b) . "<br>";
+echo "Modulus: " . ($a % $b) . "<br>";
+
+// Comparison operators
+echo "<h3>Comparison Operators</h3>";
+var_dump($a > $b);
+echo "<br>";
+var_dump($a == $b);
+echo "<br>";
+var_dump($a != $b);
+
+// Logical operators
+echo "<h3>Logical Operators</h3>";
+var_dump($a > 10 && $b < 20);
+echo "<br>";
+var_dump($a < 10 || $b < 20);
+
+/* 
+   5. CONDITIONAL STATEMENTS
+    */
+
+echo "<h2>5. Conditional Statements</h2>";
+
+$studentMarks = 75;
+
+if ($studentMarks >= 90) {
+    echo "Grade: A+";
+} elseif ($studentMarks >= 75) {
+    echo "Grade: A";
+} elseif ($studentMarks >= 60) {
+    echo "Grade: B";
+} elseif ($studentMarks >= 50) {
+    echo "Grade: C";
+} else {
+    echo "Grade: Fail";
+}
+
+echo "<br><br>";
+
+$day = "Monday";
+
+switch ($day) {
+    case "Monday":
+        echo "Today is Monday.";
+        break;
+
+    case "Tuesday":
+        echo "Today is Tuesday.";
+        break;
+
+    case "Wednesday":
+        echo "Today is Wednesday.";
+        break;
+
+    default:
+        echo "Another day.";
+}
+
+/* 
+   6. LOOPS
+*/
+
+echo "<h2>6. Loops</h2>";
+
+echo "<h3>For Loop</h3>";
+
+for ($i = 1; $i <= 5; $i++) {
+    echo "Number: $i<br>";
+}
+
+echo "<h3>While Loop</h3>";
+
+$i = 1;
+
+while ($i <= 5) {
+    echo "Number: $i<br>";
+    $i++;
+}
+
+echo "<h3>Do-While Loop</h3>";
+
+$i = 1;
+
+do {
+    echo "Number: $i<br>";
+    $i++;
+} while ($i <= 5);
+
+echo "<h3>Foreach Loop</h3>";
+
+$subjects = array("PHP", "HTML", "CSS", "JavaScript");
+
+foreach ($subjects as $subject) {
+    echo "Subject: $subject<br>";
+}
+
+/*
+   7. ARRAYS
+   */
+
+echo "<h2>7. Arrays</h2>";
+
+echo "<h3>Indexed Array</h3>";
+
+$colors = array("Red", "Green", "Blue");
+
+foreach ($colors as $color) {
+    echo "$color<br>";
+}
+
+echo "<h3>Associative Array</h3>";
+
+$student = array(
+    "name" => "Ashwik",
+    "age" => 20,
+    "course" => "PHP"
+);
+
+echo "Name: " . $student["name"] . "<br>";
+echo "Age: " . $student["age"] . "<br>";
+echo "Course: " . $student["course"] . "<br>";
+
+echo "<h3>Multidimensional Array</h3>";
+
+$students = array(
+    array("Rahul", 85),
+    array("Priya", 90),
+    array("Aman", 78)
+);
+
+foreach ($students as $studentData) {
+    echo "Name: " . $studentData[0] .
+         " | Marks: " . $studentData[1] . "<br>";
+}
+
+/*
+   8. FUNCTIONS
+ */
+
+echo "<h2>8. Functions</h2>";
+
+function greet($name)
+{
+    return "Hello, " . $name . "!";
+}
+
+echo greet("Ashwik") . "<br>";
+
+function addNumbers($num1, $num2)
+{
+    return $num1 + $num2;
+}
+
+$result = addNumbers(25, 15);
+
+echo "25 + 15 = " . $result . "<br>";
+
+function calculateSquare($number)
+{
+    return $number * $number;
+}
+
+echo "Square of 8 = " . calculateSquare(8) . "<br>";
+
+
+echo "<hr>";
+echo "<strong>PHP Syntax Task Completed Successfully.</strong>";
+
+?>
+```
